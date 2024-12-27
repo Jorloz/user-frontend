@@ -1,0 +1,19 @@
+.dropdown-wrapper {
+    position: relative;
+  }
+  
+  .dropdown-wrapper select {
+    appearance: none; /* Para eliminar la flecha predeterminada */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 2rem; /* Espacio para el ícono */
+  }
+  
+  .dropdown-wrapper .dropdown-icon {
+    position: absolute;
+    right: 1rem; /* Alinea con el borde del campo */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Evita que el ícono interfiera con clics */
+    color: #555; /* Color del ícono */
+  }

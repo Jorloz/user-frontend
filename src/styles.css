@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+/* Color del botón btn-primary en su estado normal */
+.btn-primary {
+    background-color: #0d3589; /* El color normal del fondo */
+    border-color: #0d3589; /* El color del borde */
+  }
+  
+  /* Color del botón btn-primary cuando está en hover */
+  .btn-primary:hover {
+    background-color: #197dc8; /* Color al pasar el mouse sobre el botón */
+    border-color: #197dc8; /* Color del borde al pasar el mouse */
+  }
+  
+  /* Color del botón btn-primary cuando está deshabilitado */
+  .btn-primary:disabled {
+    background-color: #b4c0ca; /* Color de fondo cuando está deshabilitado */
+    border-color: #676d73; /* Color del borde cuando está deshabilitado */
+    color: #676d73; /* Color del texto cuando está deshabilitado */
+  }
+  
+
+  .btn-secondary {
+    background-color: #ffffff; /* El color normal del fondo */
+    border-color: #adadaf; /* El color del borde */
+    color: #adadaf;
+  }
+  
+  /* Color del botón btn-secondary cuando está en hover */
+  .btn-secondary:hover {
+    background-color: #ffffff; /* Color al pasar el mouse sobre el botón */
+    border-color: #adadaf; /* Color del borde al pasar el mouse */
+    color: #adadaf
+  }
+  
+  /* Color del botón btn-secondary cuando está deshabilitado */
+  .btn-secondary:disabled {
+    background-color: #ffffff; /* Color de fondo cuando está deshabilitado */
+    border-color: #adadaf; /* Color del borde cuando está deshabilitado */
+    color: #676d73; /* Color del texto cuando está deshabilitado */
+  }
+
+  .btn-secondary:hover {
+    background-color: #ffffff;
+    border-color: #adadaf;
+    color: #adadaf
+  }
+  

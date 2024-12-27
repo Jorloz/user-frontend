@@ -1,0 +1,59 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card p-4" style="border-radius: 15px; width: 400px; background-color: #d2eafc;">
+
+        <!-- Tipo de documento -->
+        <div class="form-group position-relative">
+            <label for="documentType">Tipo de documento</label>
+            <div class="dropdown">
+                <button 
+                    class="btn btn-light dropdown-toggle w-100 text-start" 
+                    type="button" 
+                    id="dropdownMenuButton" 
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false">
+                    {{ selectedDocumentTypeLabel || 'Seleccione tipo de documento' }}
+                </button>
+                <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                    <li>
+                        <button 
+                            class="dropdown-item" 
+                            type="button" 
+                            (click)="selectDocumentType('C', 'Cédula de ciudadanía')">
+                            Cédula de ciudadanía
+                        </button>
+                    </li>
+                    <li>
+                        <button 
+                            class="dropdown-item" 
+                            type="button" 
+                            (click)="selectDocumentType('P', 'Pasaporte')">
+                            Pasaporte
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Número de documento -->
+        <div class="form-group mt-3">
+            <label for="documentNumber">Número de documento</label>
+            <input type="text" 
+                   class="form-control" 
+                   id="documentNumber" 
+                   [(ngModel)]="documentNumber" 
+                   name="documentNumber"
+                   placeholder="Ingrese el número de documento"
+                   (input)="formatNumber($event)"
+                   required minlength="10" maxlength="14">
+        </div>
+
+        <!-- Botón Buscar -->
+        <div class="form-group mt-4 text-center">
+            <button class="btn btn-primary btn-lg w-100" style="border-radius: 25px;" 
+                    (click)="searchUser()"
+                    [disabled]="!isFormValid() || !documentType">
+                Buscar
+            </button>
+        </div>
+    </div>
+</div>
