@@ -22,7 +22,7 @@ export class UserInfoComponent implements OnInit {
     if (storedUserInfo) {
       this.userInfo = JSON.parse(storedUserInfo); 
     } else {
-      console.log('No se encontraron datos de usuario en localStorage');
+      console.error('No se encontraron datos de usuario en localStorage');
     }
 
     const documentId = this.route.snapshot.paramMap.get('documentId');
